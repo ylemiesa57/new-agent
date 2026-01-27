@@ -25,9 +25,7 @@ load_dotenv()
 
 openrouter_api_key = os.getenv("OPENROUTER_API_KEY")
 if openrouter_api_key:
-    openrouter_model = os.getenv(
-        "OPENROUTER_MODEL", "arcee-ai/trinity-large-preview:free"
-    )
+    openrouter_model = os.getenv("OPENROUTER_MODEL", "openai/gpt-4o-mini")
     openrouter_base_url = os.getenv(
         "OPENROUTER_BASE_URL", "https://openrouter.ai/api/v1"
     )
