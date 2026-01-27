@@ -17,12 +17,34 @@ load_dotenv()
 # ==============================================================================
 # STEP 1: Configure your LLM (Language Model)
 # ==============================================================================
-# This is the "brain" of your agent. We're using OpenAI's GPT-4o-mini.
-# Make sure to set your OPENAI_API_KEY in the .env file!
+# This is the "brain" of your agent. You can use OpenAI or Gemini.
+# 
+# Option 1: OpenAI (default)
+# - Set OPENAI_API_KEY in .env file
+# - Get key at: https://platform.openai.com/api-keys
+#
+# Option 2: Gemini
+# - Set GEMINI_API_KEY in .env file  
+# - Get key at: https://aistudio.google.com/apikey
+# - Available models: gemini-2.5-pro, gemini-1.5-pro, gemini-1.5-flash
 
+import os
+
+# Option 1: Using OpenAI (default)
+# llm = LLM(
+#     model="openai/gpt-4o-mini",  # The AI model to use
+#     temperature=0.7,              # Controls creativity (0.0 = focused, 1.0 = creative)
+# )
+
+# Option 2: Using Gemini (uncomment to use instead of OpenAI)
+gemini_api_key = os.getenv("GEMINI_API_KEY")
 llm = LLM(
-    model="openai/gpt-4o-mini",  # The AI model to use
-    temperature=0.7,              # Controls creativity (0.0 = focused, 1.0 = creative)
+    model="gemini/gemini-2.5-flash",  # Fast and efficient model (gemini-1.5-flash not available, using 2.5-flash)
+    # model="gemini/gemini-flash-latest",  # Alternative: latest flash model alias
+    # model="gemini/gemini-2.0-flash",     # Alternative: older flash version
+    # model="gemini/gemini-2.5-pro",       # More capable but slower
+    api_key=gemini_api_key,
+    temperature=0.7,
 )
 
 

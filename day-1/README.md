@@ -22,13 +22,24 @@ Goal: Build a basic agent loop and create your first AI twin using CrewAI (no to
 
 ## Quick Start
 
-### 1. Install Dependencies
+### 1. Set Up Virtual Environment (Recommended)
+
+On macOS/Linux, Python is often externally managed. Create a virtual environment to avoid conflicts:
+
+```bash
+python3 -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
+
+### 2. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2. Set Up Environment Variables
+**Note**: If you get an "externally-managed-environment" error, make sure you've activated the virtual environment first (see step 1).
+
+### 3. Set Up Environment Variables
 
 ```bash
 cp env_example.txt .env
@@ -162,8 +173,17 @@ An agent follows this cycle:
 - Check that your API key is correctly formatted
 
 **Error: "Module not found"**
+- Make sure you've activated the virtual environment: `source venv/bin/activate`
 - Run `pip install -r requirements.txt`
 - Make sure you're in the correct directory
+
+**Error: "externally-managed-environment"**
+- Create and activate a virtual environment first:
+  ```bash
+  python3 -m venv venv
+  source venv/bin/activate
+  pip install -r requirements.txt
+  ```
 
 **Agent gives wrong answers**
 - Add more detail to the backstory
