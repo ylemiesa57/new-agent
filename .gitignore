@@ -46,3 +46,10 @@ day-2/db/
 
 # Generated files
 day-2/blog-posts/
+
+# Next.js build output/cache (interface/) — was accidentally committed,
+# including large webpack cache blobs.
+.next/
+
+# Runtime log files
+*.log

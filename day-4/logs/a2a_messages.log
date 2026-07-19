@@ -1,6 +1,0 @@
-2026-01-26 00:51:15,361 | INFO | INCOMING | conversation_id=test-conv-123 | message=@furniture-expert What sofa should I buy?
-2026-01-26 00:51:15,363 | INFO | ROUTING | conversation_id=test-conv-123 | target=furniture-expert | message=What sofa should I buy?
-2026-01-26 00:51:15,363 | INFO | SUCCESS | conversation_id=test-conv-123 | target=furniture-expert | response_length=54
-2026-01-26 00:51:50,381 | INFO | INCOMING | conversation_id=test-conv-123 | message=@furniture-expert What sofa should I buy?
-2026-01-26 00:51:50,381 | INFO | ROUTING | conversation_id=test-conv-123 | target=furniture-expert | message=What sofa should I buy?
-2026-01-26 00:51:50,417 | INFO | SUCCESS | conversation_id=test-conv-123 | target=furniture-expert | response_length=209
