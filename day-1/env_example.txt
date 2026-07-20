@@ -9,9 +9,14 @@
 # Then edit .env and replace "your-api-key-here" with your actual OpenAI API key
 # ==============================================================================
 
-# OpenAI API Key (required)
+# OpenAI API Key (required if using the OpenAI option in main.py)
 # Get yours at: https://platform.openai.com/api-keys
 OPENAI_API_KEY=your-api-key-here
+
+# Gemini API Key (required if using the Gemini option in main.py/interactive.py --
+# this is what main.py is currently configured to use by default)
+# Get yours at: https://aistudio.google.com/apikey
+GEMINI_API_KEY=your-gemini-api-key-here
 
 # Optional: Set default model (uncomment to use)
 # MODEL=gpt-4o-mini
