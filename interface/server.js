@@ -109,8 +109,10 @@ app.post('/api/agents', async (req, res) => {
 
     const agents = await readAgents();
 
-    // Check for duplicate username
-    if (agents.some(agent => agent.username === username)) {
+    // Check for duplicate username (case-insensitive, matching how usernames
+    // are normalized below via .trim().toLowerCase() before being stored)
+    const normalizedUsername = username.trim().toLowerCase();
+    if (agents.some(agent => agent.username === normalizedUsername)) {
       return res.status(409).json({ 
         error: 'This username is already taken' 
       });
