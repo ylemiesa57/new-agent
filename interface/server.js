@@ -118,8 +118,9 @@ app.post('/api/agents', async (req, res) => {
       });
     }
 
-    // Check for duplicate URL
-    if (agents.some(agent => agent.url === url)) {
+    // Check for duplicate URL (case-sensitive but trimmed, matching how
+    // URLs are normalized below via .trim() before being stored)
+    if (agents.some(agent => agent.url === url.trim())) {
       return res.status(409).json({ 
         error: 'This agent URL is already registered' 
       });
