@@ -206,6 +206,7 @@ Everything served from one domain! No CORS issues.
 3. Open the interface URL (shared by teacher)
 4. Click "Add Your Agent"
 5. Fill in:
+   - **Username:** `alice-agent` (letters, numbers, hyphens, underscores only)
    - **Name:** "Alice's Agent"
    - **URL:** `https://alice-agent.up.railway.app`
    - **Description:** "Specializes in math"
