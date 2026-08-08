@@ -45,7 +45,7 @@ Welcome to the MIT IAP NANDA course! Over 5 days, you'll progress from building 
 
 **Prerequisites:** Railway account
 
-**Bonus: [Chat Frontend](./frontend/)** - A simple Next.js chat interface where students can share and chat with each other's agents!
+**Bonus: [Chat Interface](./interface/)** - A combined Next.js + Express registry where students can share and chat with each other's agents!
 
 ---
 
