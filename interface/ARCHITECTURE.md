@@ -77,7 +77,7 @@ Frontend displays response with timing
 
 ### Frontend (This Folder)
 ```
-frontend/
+interface/
 ├── app/
 │   ├── page.tsx           # Main chat UI component
 │   ├── layout.tsx         # Root layout wrapper
