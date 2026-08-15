@@ -406,7 +406,7 @@ def parse_a2a_request(message: str) -> tuple[Optional[str], str]:
     target_agent = mentions[0]
     
     # Remove the @agent-id from the message
-    clean_message = re.sub(r'@' + target_agent + r'\s*', '', message, count=1)
+    clean_message = re.sub(r'@' + re.escape(target_agent) + r'\s*', '', message, count=1)
     
     return target_agent, clean_message
 
