@@ -5,6 +5,7 @@ Interactive Personal Agent Twin
 
 from crewai import Agent, Task, Crew, LLM
 from dotenv import load_dotenv
+import os
 
 # Load environment variables from .env file
 load_dotenv()
@@ -13,12 +14,12 @@ load_dotenv()
 # Configure the LLM
 # ==============================================================================
 
+gemini_api_key = os.getenv("GEMINI_API_KEY")
 llm = LLM(
     model="gemini/gemini-2.5-flash",
+    api_key=gemini_api_key,
     temperature=0.7,
 )
-
-# ==============================================================================
 # Create your Personal Agent Twin
 # ==============================================================================
 
